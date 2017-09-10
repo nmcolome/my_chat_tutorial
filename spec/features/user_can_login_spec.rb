@@ -25,5 +25,6 @@ RSpec.describe "a user can login" do
     click_on "Login"
 
     expect(current_path).to eq("/login")
+    expect(page).to have_content("Invalid username or password")
   end
 end
