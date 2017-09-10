@@ -1,24 +1,40 @@
-# README
+# My Chat Tutorial
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[![Build Status](https://travis-ci.org/nmcolome/my_chat_tutorial.svg?branch=master)](https://travis-ci.org/nmcolome/my_chat_tutorial)
 
-Things you may want to cover:
+## Description
+This is the source code for [My Chat Tutorial]().
 
-* Ruby version
+The `master` branch has basic setup, Sign Up/ Login/ Logout functionality and testing.
 
-* System dependencies
+To get started with this setup, fork the repository and clone it to your local machine, then run:
 
-* Configuration
+```
+bundle
+rake db:{create,migrate}
+```
+To dowload the app with chat functionality, switch to `private_chats` branch:
+```
+git checkout private_chats
+```
+The final state of the app and the end of the tutorial is in the `action_cable` branch:
+```
+git checkout action_cable
+```
+When following the tutorial, you should be able to solve any issues or differences by referencing this code base.
 
-* Database creation
+## Testing
+To run the tests:
+```
+rspec
+```
 
-* Database initialization
+To run a specific test:
+```
+rspec spec/directory_name/test_name_spec.rb
+```
+## Stack
+Ruby on Rails 5.1.4, Ruby 2.4.1
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Author
+[Natalia Colomé]()
