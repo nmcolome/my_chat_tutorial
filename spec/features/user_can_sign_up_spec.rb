@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe "a user can signup" do
-  it "with valid credentials" do
+RSpec.describe "Sign Up" do
+  it "is a success with valid credentials" do
     visit "/"
     click_on "Sign Up"
 
@@ -14,7 +14,7 @@ RSpec.describe "a user can signup" do
     expect(current_path).to eq("/")
   end
 
-  it "without a password" do
+  it "returns error without a password" do
     visit "/"
     click_on "Sign Up"
 
@@ -28,7 +28,7 @@ RSpec.describe "a user can signup" do
     expect(page).to have_content("Invalid username or password")
   end
 
-  it "without a name" do
+  it "returns error without a name" do
     visit "/"
     click_on "Sign Up"
 

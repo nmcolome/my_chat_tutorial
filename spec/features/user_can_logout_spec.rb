@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "a user can logout" do
+RSpec.describe "Logout" do
   it "is a success" do
     user = User.create(username: "test_user", password: "password")
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
