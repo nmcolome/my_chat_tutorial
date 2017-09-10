@@ -13,4 +13,17 @@ RSpec.describe "a user can login" do
 
     expect(current_path).to eq("/")
   end
+
+  it "with invalid credentials" do
+    user = User.create(username: "test_user", password: "password")
+
+    visit "/"
+    click_on "Login"
+
+    fill_in "Username", with: "wrong"
+    fill_in "Password", with: "wrong"
+    click_on "Login"
+
+    expect(current_path).to eq("/login")
+  end
 end
