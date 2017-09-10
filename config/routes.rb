@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#delete"
 
   resources :users, only: [:new, :create]
+  resources :private_chats, only: [:new, :create]
 end
