@@ -5,4 +5,8 @@ RSpec.describe User, type: :model do
     it { is_expected.to respond_to(:username) }
     it { is_expected.to respond_to(:password) }
   end
+
+  describe "relationships" do
+    it { should have_many(:messages) }
+  end
 end
